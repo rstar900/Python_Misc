@@ -4,13 +4,13 @@ import cppyy
 
 # Define a simple cpp function for printing hello world
 # We use double slashes before newline as we are in a string
-cppyy.def(
+cppyy.cppdef(
   """
   #include <iostream>
 
   void helloWorld()
   {
-    std::cout << "Hello World from C++ code!\\n"
+    std::cout << "Hello World from C++ code!\\n";
   }
   """
 )
